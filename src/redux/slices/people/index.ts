@@ -1,21 +1,7 @@
 import {createSlice} from '@reduxjs/toolkit';
 import {fetchPeople} from '../../thunk/people.thunk';
-import {Person} from '../../../models/Person';
-// Define a type for the slice state
-interface PeopleState {
-  page: number;
-  people: Array<Person>;
-  isLoading: boolean;
-  error: string | undefined;
-}
-// Define the initial state using that type
-const initialState: PeopleState = {
-  page: 1,
-  people: [],
-  isLoading: false,
-  error: undefined,
-};
-//
+import {initialState} from './initialState';
+
 const slice = createSlice({
   name: 'people',
   initialState: initialState,

@@ -1,18 +1,6 @@
 import {PayloadAction, createSlice} from '@reduxjs/toolkit';
-
-export type FavoritePerson = {
-  id: number;
-  name: string;
-  gender: string;
-};
-
-interface PeopleState {
-  people: Array<FavoritePerson>;
-}
-
-const initialState: PeopleState = {
-  people: [],
-};
+import {initialState} from './initialState';
+import {FavoritePerson} from './types';
 //
 const slice = createSlice({
   name: 'favorites',
